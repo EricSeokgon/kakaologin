@@ -2,6 +2,7 @@ package com.bals.kakaologin.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -11,8 +12,9 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping(value = "/login")
-    public String login() {
+    @RequestMapping(value="/login")
+    public String login(@RequestParam("code") String code) {
+        System.out.println("code : " + code);
         return "index";
     }
 }
