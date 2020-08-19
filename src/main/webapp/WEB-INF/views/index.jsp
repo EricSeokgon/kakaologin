@@ -9,7 +9,10 @@
 </head>
 <body>
 <c:if test="${userId eq null}">
-    <a href="">
+    <a href="https://kauth.kakao.com/oauth/authorize
+            ?client_id=b5f85af25d1bdf961d4f2016bafe3c6e
+            &redirect_uri=http://localhost:8000/login
+            &response_type=code">
         <img src="/img/kakao_login_medium_narrow.png">
     </a>
 </c:if>
