@@ -14,12 +14,12 @@ public class HomeController {
     @Autowired
     private KakaoAPI kakao;
 
-    @RequestMapping(value="/")
+    @RequestMapping(value = "/")
     public String index() {
         return "index";
     }
 
-    @RequestMapping(value="/login")
+    @RequestMapping(value = "/login")
     public String login(@RequestParam("code") String code, HttpSession session) {
         String access_Token = kakao.getAccessToken(code);
         HashMap<String, Object> userInfo = kakao.getUserInfo(access_Token);
