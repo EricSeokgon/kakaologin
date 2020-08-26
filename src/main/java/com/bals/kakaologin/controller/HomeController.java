@@ -1,13 +1,10 @@
 package com.bals.kakaologin.controller;
 
 import com.bals.kakaologin.service.KakaoAPI;
-import com.bals.kakaologin.service.kakao_restapi;
-import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
@@ -17,6 +14,7 @@ import java.util.HashMap;
 public class HomeController {
     @Autowired
     private KakaoAPI kakao;
+
 
     @RequestMapping(value = "/")
     public String index() {
@@ -58,4 +56,5 @@ public class HomeController {
         session.removeAttribute("userId");
         return "index";
     }
+
 }
